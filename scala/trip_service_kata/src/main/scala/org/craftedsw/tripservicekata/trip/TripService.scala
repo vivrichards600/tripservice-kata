@@ -3,23 +3,23 @@ package org.craftedsw.tripservicekata.trip
 import org.craftedsw.tripservicekata.user.{UserSession, User}
 import org.craftedsw.tripservicekata.exception.UserNotLoggedInException
 
-import scala.util.control.Breaks.break
+import scala.util.control.Breaks._
 
 class TripService {
 
 	def getTripsByUser(user: User): List[Trip] = {
 		var tripList: List[Trip] = List()
-		val loggedInUser = UserSession getLoggedUser()
+		val loggedInUser = getLoggedInUser
 		var isFriend = false
 		if (loggedInUser != null) {
-			for (friend <- user.friends()) {
-				if (friend == loggedInUser) {
-					isFriend = true
-					break
-				}
-			}
+			breakable { for (friend <- user.friends()) {
+          if (friend == loggedInUser) {
+            isFriend = true
+            break
+          }
+			}}
 			if (isFriend) {
-				tripList = TripDAO.findTripsByUser(user)
+				tripList = tripsBy(user)
 			}
 			tripList
 		} else {
@@ -27,4 +27,11 @@ class TripService {
 		}
 	}
 
+  protected def tripsBy(user: User): List[Trip] = {
+    TripDAO.findTripsByUser(user)
+  }
+
+  protected def getLoggedInUser: User = {
+    UserSession getLoggedUser()
+  }
 }
