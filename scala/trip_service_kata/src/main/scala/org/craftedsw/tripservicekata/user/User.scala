@@ -24,4 +24,7 @@ class User {
 		tripList += trip
 	}
 
+  def isFriendsWith(user: User) : Boolean = {
+    this friends() contains(user)
+  }
 }
