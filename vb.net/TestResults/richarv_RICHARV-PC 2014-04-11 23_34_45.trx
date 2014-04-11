@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="74d15178-1976-4b92-878d-7259bd839b37" name="richarv@RICHARV-PC 2014-04-11 23:34:45" runUser="richarv-PC\richarv" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="b3a1800c-8ba9-475c-a785-b35abc00a2c0">
+    <Deployment runDeploymentRoot="richarv_RICHARV-PC 2014-04-11 23_34_45">
+      <DeploymentItem filename="C:\Users\richarv\Documents\GitHub\tripservice-kata\vb.net\TripServiceKata\TripServiceKataVB\bin\Debug\TripServiceKata.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-04-11T23:34:45.0738409+01:00" queuing="2014-04-11T23:34:45.4537237+01:00" start="2014-04-11T23:34:45.5660284+01:00" finish="2014-04-11T23:34:46.4595831+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Trip_Service" storage="c:\users\richarv\documents\github\tripservice-kata\vb.net\tripservicekata\tripservicekatatests\bin\debug\tripservicekatatests.dll" id="fde1ed54-18bc-c325-e20b-86ca560733f9">
+      <Execution id="04fb85c7-8fce-4324-b56b-bd47e172ea6f" />
+      <TestMethod codeBase="C:/Users/richarv/Documents/GitHub/tripservice-kata/vb.net/TripServiceKata/TripServiceKataTests/bin/Debug/TripServiceKataTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TripServiceKataTests.TripServiceKata.Tests.TripServiceTest, TripServiceKataTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Trip_Service" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="fde1ed54-18bc-c325-e20b-86ca560733f9" executionId="04fb85c7-8fce-4324-b56b-bd47e172ea6f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="04fb85c7-8fce-4324-b56b-bd47e172ea6f" testId="fde1ed54-18bc-c325-e20b-86ca560733f9" testName="Trip_Service" computerName="RICHARV-PC" duration="00:00:00.0332245" startTime="2014-04-11T23:34:45.6031378+01:00" endTime="2014-04-11T23:34:45.7867315+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="04fb85c7-8fce-4324-b56b-bd47e172ea6f">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TripServiceKataTests.TripServiceKata.Tests.TripServiceTest.Trip_Service threw exception TripServiceKata.TripServiceKata.Exception.DependendClassCallDuringUnitTestException, but exception TripServiceKata.TripServiceKata.Exception.UserNotLoggedInException was expected. Exception message: TripServiceKata.TripServiceKata.Exception.DependendClassCallDuringUnitTestException: UserSession.GetLoggedUser() should not be called in an unit test</Message>
+          <StackTrace>    at TripServiceKata.TripServiceKata.User.UserSession.GetLoggedUser() in C:\Users\richarv\Documents\GitHub\tripservice-kata\vb.net\TripServiceKata\TripServiceKataVB\User\UserSession.vb:line 19
+   at TripServiceKata.TripServiceKata.Trip.TripService.GetTripsByUser(User user) in C:\Users\richarv\Documents\GitHub\tripservice-kata\vb.net\TripServiceKata\TripServiceKataVB\Trip\TripService.vb:line 9
+   at TripServiceKataTests.TripServiceKata.Tests.TripServiceTest.Trip_Service() in C:\Users\richarv\Documents\GitHub\tripservice-kata\vb.net\TripServiceKata\TripServiceKataTests\TripServiceTest.vb:line 53
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
