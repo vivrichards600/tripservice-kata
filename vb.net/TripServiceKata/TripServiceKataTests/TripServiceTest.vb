@@ -46,14 +46,18 @@ Namespace TripServiceKata.Tests
 
         <TestMethod()>
         <ExpectedException(GetType(UserNotLoggedInException))> _
-        Public Sub Trip_Service()
+        Public Sub TestUserNotLoggedInThrowsException()
+           
+            'Given we have a guest
             Dim GUEST As New User
 
+            'When we call get trips by user we should get an exception as user is not logged in
             Dim tripService As New TripService
             tripService.GetTripsByUser(GUEST)
 
         End Sub
 
+      
     End Class
 
 End Namespace
