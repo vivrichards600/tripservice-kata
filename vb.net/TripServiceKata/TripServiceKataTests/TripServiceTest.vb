@@ -45,7 +45,13 @@ Namespace TripServiceKata.Tests
 #End Region
 
         <TestMethod()>
-        Public Sub Trip_Service() 
+        <ExpectedException(GetType(UserNotLoggedInException))> _
+        Public Sub Trip_Service()
+            Dim GUEST As New User
+
+            Dim tripService As New TripService
+            tripService.GetTripsByUser(GUEST)
+
         End Sub
 
     End Class
