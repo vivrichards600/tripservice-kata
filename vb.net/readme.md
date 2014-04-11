@@ -1,7 +1,7 @@
 Testing legacy code: Hard-wired dependencies
 ============================================
 
-Code related to my [Testing legacy code: Hard-wired dependencies][1] blog post. Try not reading the blog post before doing the exercise yourself.
+Code related to my [Testing legacy code: Hard-wired dependencies] blog post. Try not reading the blog post before doing the exercise yourself.
 
 What is it about?
 -----------------
@@ -17,5 +17,5 @@ Details
 
 If you want to give it a go, the starting point is [TripServiceTest.vb] and [TripService.vb]. Try unit testing it following the rule above.
 
-For future comparisions, when you are done, you can always check [TripService_Original.vb][2]
+For future comparisions, when you are done, you can always check [TripService_Original.vb]
 
